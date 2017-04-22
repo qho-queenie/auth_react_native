@@ -1,7 +1,7 @@
 # iOS Authentication  
 
-### Google Firebase  
-### React-Native  
+#### Google Firebase  
+#### React-Native  
 
 ##### Queenie Ho  
 https://github.com/qho-queenie  
