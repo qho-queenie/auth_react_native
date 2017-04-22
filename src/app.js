@@ -7,14 +7,21 @@ import LoginForm from './components/LoginForm';
 class App extends Component {
   componentWillMount() {
       firebase.initializeApp({
-        apiKey: 'AIzaSyDVN7aTEuVHqjYvKN7AXk9PlLFfMgCgI6k',
-        authDomain: 'auth-b7bda.firebaseapp.com',
-        databaseURL: 'https://auth-b7bda.firebaseio.com',
-        projectId: 'auth-b7bda',
-        storageBucket: 'auth-b7bda.appspot.com',
-        messagingSenderId: '166484190609'
+        apiKey: 'AIzaSyBHGRjXRf8iwB1aEPAxK-9aePjXWfwPGTA',
+        authDomain: 'auth-4427d.firebaseapp.com',
+        databaseURL: 'https://auth-4427d.firebaseio.com',
+        projectId: 'auth-4427d',
+        storageBucket: 'auth-4427d.appspot.com',
+        messagingSenderId: '114555205128'
     });
   }
+
+  // apiKey: "AIzaSyApT8GTKGgVeJtT4pUP90_UR5HJgR8YOOE",
+  // authDomain: "auth-d8a9b.firebaseapp.com",
+  // databaseURL: "https://auth-d8a9b.firebaseio.com",
+  // projectId: "auth-d8a9b",
+  // storageBucket: "auth-d8a9b.appspot.com",
+  // messagingSenderId: "80828740397"
 
   render() {
     return (
