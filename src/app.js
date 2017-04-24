@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import firebase from 'firebase';
-import { Header, Button, CardSection } from './components/common';
+import { Header, Button, CardSection, Spinner } from './components/common';
 import LoginForm from './components/LoginForm';
 
 class App extends Component {
@@ -34,32 +34,37 @@ class App extends Component {
   // projectId: "auth-d8a9b",
   // storageBucket: "auth-d8a9b.appspot.com",
   // messagingSenderId: "80828740397"
+  // <Button ass={this.anything.bind(this)}>
 
    anything(){
-
   };
 
   renderContent() {
-    if (this.state.loggedIn) {
-      console.log("button");
-      return (
-        <CardSection>
-          <Button ass={this.anything.bind(this)}>
-            Logout
-          </Button>
-        </CardSection>
-      );
-  }
-  return <LoginForm />;
+    switch (this.state.loggedIn){
+      case true:
+        console.log("button");
+        return (
+          <CardSection>
+            <Button ass={() => firebase.auth().signOut()}>
+            {console.log("ass")}
+              Logout
+            </Button>
+          </CardSection>
+        );
+      case false:
+          return <LoginForm />;
+      default:
+        return <Spinner size="large" />
+    }
 }
 
   render() {
     return (
       <View>
         <Header poop="Authentication" />
-        <Button>
-        asdf
-        </Button>
+          <Button>
+            asdf
+          </Button>
         {this.renderContent()}
       </View>
     );
